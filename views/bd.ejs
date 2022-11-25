@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Base de datos</h1>
+    <link rel='stylesheet' href='/stylesheets/style_index.css' />
+    
+  </head>
+  
+  <h2>Información de los cursos ofertados</h2>
+    <table class = "tableInfoCourses">
+      <tr>
+        <th>Nombre del curso</th>
+        <th>Grupo o nivel</th>
+        <th>Horario</th>
+        <th>Número de semanas</th>
+        <th>Precio (€/semana)</th>
+      </tr>      
+      <% results.forEach(function(r) { %>
+      <tr>
+        <td><%= r.curso %></td>
+        <td><%= r.grupo %></td>
+        <td><%= r.horario %></td>
+        <td><%= r.semanas %></td>
+        <td><%= r.precio%></td>
+      </tr>            
+      <%}); %>
+    </table>    
+  </body>
+</html>
